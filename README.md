@@ -13,7 +13,7 @@ Jake Zidow
 
 Christina Duran 
 
-Sean McGrath
+Sean McGrath ssmcgrat@ucsc.edu
 
 Daniel Urrutia
 
