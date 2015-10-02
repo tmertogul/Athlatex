@@ -11,7 +11,7 @@ Tim Mertogul tmertogu@ucsc.edu
 
 Jake Zidow 
 
-Christina Duran 
+Christina Duran crduran@ucsc.edu
 
 Sean McGrath ssmcgrat@ucsc.edu
 
@@ -19,5 +19,5 @@ Daniel Urrutia
 
 Justin Wong
 
-Git Edit 1
+Git Edit 2
 
