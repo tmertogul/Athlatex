@@ -9,7 +9,7 @@ Group Members:
 
 Tim Mertogul tmertogu@ucsc.edu
 
-Jake Zidow 
+Jake Zidow jrzidow@ucsc.edu
 
 Christina Duran crduran@ucsc.edu
 
@@ -19,5 +19,5 @@ Daniel Urrutia
 
 Justin Wong
 
-Git Edit 3
+Git Edit 4
 
