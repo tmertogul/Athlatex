@@ -17,7 +17,7 @@ Sean McGrath ssmcgrat@ucsc.edu
 
 Daniel Urrutia
 
-Justin Wong
+Justin Wong jujwong@ucsc.edu
 
 Git Edit 4
 
