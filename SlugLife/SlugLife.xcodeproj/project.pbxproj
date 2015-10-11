@@ -148,6 +148,7 @@
 				TargetAttributes = {
 					221CC94A1BC3103100EC8A51 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 7T7E59WKSX;
 					};
 					221CC9601BC3103100EC8A51 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -330,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SlugLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Athlatex-cs115.SlugLife";
@@ -341,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SlugLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Athlatex-cs115.SlugLife";
