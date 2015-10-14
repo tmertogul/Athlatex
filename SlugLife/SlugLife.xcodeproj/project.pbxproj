@@ -27,6 +27,26 @@
 		332822411BC7928A00A51850 /* Add User-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 332822401BC7928A00A51850 /* Add User-25.png */; settings = {ASSET_TAGS = (); }; };
 		332822431BC7929B00A51850 /* Plus-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 332822421BC7929B00A51850 /* Plus-25.png */; settings = {ASSET_TAGS = (); }; };
 		332822471BCAEEE900A51850 /* group-people-dancing-party-champagne-34069305.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 332822461BCAEEE900A51850 /* group-people-dancing-party-champagne-34069305.jpg */; settings = {ASSET_TAGS = (); }; };
+		33A99AA01BCC77E90007CF82 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A99A9D1BCC77E90007CF82 /* Bolts.framework */; };
+		33A99AA11BCC77E90007CF82 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A99A9E1BCC77E90007CF82 /* Parse.framework */; };
+		33A99AA21BCC77E90007CF82 /* libsqlite3.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A99A9F1BCC77E90007CF82 /* libsqlite3.bundle */; };
+		33A99AA41BCC781B0007CF82 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A99AA31BCC781B0007CF82 /* ParseUI.framework */; };
+		33A99AAB1BCCA6D00007CF82 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A99AAA1BCCA6D00007CF82 /* MyEventsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		33A99AAF1BCDE2F50007CF82 /* AddEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A99AAE1BCDE2F50007CF82 /* AddEventsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		33EEF3991BCC5F54002B1926 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEF3981BCC5F54002B1926 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		33EEF39B1BCC5FF8002B1926 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEF39A1BCC5FF8002B1926 /* RegisterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		33EEF39D1BCC623D002B1926 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEF39C1BCC623D002B1926 /* UIViewControllerExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		33EEF3A81BCC66FE002B1926 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3A71BCC66FE002B1926 /* SystemConfiguration.framework */; };
+		33EEF3AA1BCC6715002B1926 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3A91BCC6715002B1926 /* StoreKit.framework */; };
+		33EEF3AC1BCC671F002B1926 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3AB1BCC671F002B1926 /* Security.framework */; };
+		33EEF3AE1BCC674D002B1926 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3AD1BCC674D002B1926 /* QuartzCore.framework */; };
+		33EEF3B01BCC6768002B1926 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3AF1BCC6768002B1926 /* MobileCoreServices.framework */; };
+		33EEF3B21BCC6777002B1926 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3B11BCC6777002B1926 /* CoreLocation.framework */; };
+		33EEF3B41BCC6780002B1926 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3B31BCC6780002B1926 /* CoreGraphics.framework */; };
+		33EEF3B61BCC6789002B1926 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3B51BCC6789002B1926 /* CFNetwork.framework */; };
+		33EEF3B81BCC6793002B1926 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3B71BCC6793002B1926 /* AudioToolbox.framework */; };
+		33EEF3C11BCC6EC5002B1926 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3C01BCC6EC5002B1926 /* libsqlite3.dylib */; };
+		33EEF3C31BCC6EDF002B1926 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3C21BCC6EDF002B1926 /* libz.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +84,27 @@
 		332822401BC7928A00A51850 /* Add User-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add User-25.png"; sourceTree = "<group>"; };
 		332822421BC7929B00A51850 /* Plus-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus-25.png"; sourceTree = "<group>"; };
 		332822461BCAEEE900A51850 /* group-people-dancing-party-champagne-34069305.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "group-people-dancing-party-champagne-34069305.jpg"; sourceTree = "<group>"; };
+		33A99A9D1BCC77E90007CF82 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		33A99A9E1BCC77E90007CF82 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		33A99A9F1BCC77E90007CF82 /* libsqlite3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = libsqlite3.bundle; sourceTree = "<group>"; };
+		33A99AA31BCC781B0007CF82 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		33A99AA51BCC787D0007CF82 /* SlugLife-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SlugLife-Bridging-Header.h"; sourceTree = "<group>"; };
+		33A99AAA1BCCA6D00007CF82 /* MyEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
+		33A99AAE1BCDE2F50007CF82 /* AddEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEventsViewController.swift; path = ../AddEventsViewController.swift; sourceTree = "<group>"; };
+		33EEF3981BCC5F54002B1926 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		33EEF39A1BCC5FF8002B1926 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		33EEF39C1BCC623D002B1926 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		33EEF3A71BCC66FE002B1926 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		33EEF3A91BCC6715002B1926 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		33EEF3AB1BCC671F002B1926 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		33EEF3AD1BCC674D002B1926 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		33EEF3AF1BCC6768002B1926 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		33EEF3B11BCC6777002B1926 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		33EEF3B31BCC6780002B1926 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		33EEF3B51BCC6789002B1926 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		33EEF3B71BCC6793002B1926 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		33EEF3C01BCC6EC5002B1926 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		33EEF3C21BCC6EDF002B1926 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +112,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A99AA41BCC781B0007CF82 /* ParseUI.framework in Frameworks */,
+				33A99AA11BCC77E90007CF82 /* Parse.framework in Frameworks */,
+				33A99AA01BCC77E90007CF82 /* Bolts.framework in Frameworks */,
+				33A99AA21BCC77E90007CF82 /* libsqlite3.bundle in Frameworks */,
+				33EEF3C31BCC6EDF002B1926 /* libz.1.dylib in Frameworks */,
+				33EEF3C11BCC6EC5002B1926 /* libsqlite3.dylib in Frameworks */,
+				33EEF3B81BCC6793002B1926 /* AudioToolbox.framework in Frameworks */,
+				33EEF3B61BCC6789002B1926 /* CFNetwork.framework in Frameworks */,
+				33EEF3B41BCC6780002B1926 /* CoreGraphics.framework in Frameworks */,
+				33EEF3B21BCC6777002B1926 /* CoreLocation.framework in Frameworks */,
+				33EEF3B01BCC6768002B1926 /* MobileCoreServices.framework in Frameworks */,
+				33EEF3AE1BCC674D002B1926 /* QuartzCore.framework in Frameworks */,
+				33EEF3AC1BCC671F002B1926 /* Security.framework in Frameworks */,
+				33EEF3AA1BCC6715002B1926 /* StoreKit.framework in Frameworks */,
+				33EEF3A81BCC66FE002B1926 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +143,8 @@
 		221CC9421BC3103000EC8A51 = {
 			isa = PBXGroup;
 			children = (
+				33A99AA51BCC787D0007CF82 /* SlugLife-Bridging-Header.h */,
+				33EEF3BB1BCC68F0002B1926 /* Frameworks */,
 				221CC94D1BC3103100EC8A51 /* SlugLife */,
 				221CC9641BC3103100EC8A51 /* SlugLifeTests */,
 				221CC94C1BC3103100EC8A51 /* Products */,
@@ -106,24 +164,15 @@
 			isa = PBXGroup;
 			children = (
 				221CC94E1BC3103100EC8A51 /* AppDelegate.swift */,
+				33EEF39F1BCC63CB002B1926 /* Model  */,
+				33EEF3A01BCC63E3002B1926 /* View */,
+				33EEF3A21BCC640D002B1926 /* ViewControllers */,
 				221CC9501BC3103100EC8A51 /* FirstViewController.swift */,
 				221CC9521BC3103100EC8A51 /* SecondViewController.swift */,
 				221CC9541BC3103100EC8A51 /* Main.storyboard */,
-				332822321BC788B000A51850 /* EventCell.swift */,
-				332822301BC782B500A51850 /* Events.swift */,
-				332822341BC78BC300A51850 /* EventsData.swift */,
-				3328222E1BC7733100A51850 /* CollegeViewTableViewController.swift */,
-				3328222A1BC7703800A51850 /* CollegePickerViewController.swift */,
-				221CC9571BC3103100EC8A51 /* Assets.xcassets */,
-				332822461BCAEEE900A51850 /* group-people-dancing-party-champagne-34069305.jpg */,
-				332822421BC7929B00A51850 /* Plus-25.png */,
-				332822401BC7928A00A51850 /* Add User-25.png */,
-				3328223E1BC7918F00A51850 /* Treasure Map-25.png */,
-				3328223C1BC7911500A51850 /* Slug-25.png */,
-				332822361BC790C700A51850 /* Calendar-50.png */,
-				332822371BC790C700A51850 /* Slug-50.png */,
-				332822381BC790C700A51850 /* Students-50.png */,
 				221CC9591BC3103100EC8A51 /* LaunchScreen.storyboard */,
+				221CC9571BC3103100EC8A51 /* Assets.xcassets */,
+				33EEF3A41BCC6467002B1926 /* Icons */,
 				221CC95C1BC3103100EC8A51 /* Info.plist */,
 			);
 			path = SlugLife;
@@ -136,6 +185,106 @@
 				221CC9671BC3103100EC8A51 /* Info.plist */,
 			);
 			path = SlugLifeTests;
+			sourceTree = "<group>";
+		};
+		33A99AAC1BCCA6DC0007CF82 /* MyEvents view */ = {
+			isa = PBXGroup;
+			children = (
+				33A99AAA1BCCA6D00007CF82 /* MyEventsViewController.swift */,
+			);
+			name = "MyEvents view";
+			sourceTree = "<group>";
+		};
+		33A99AAD1BCDE2A20007CF82 /* Add Events */ = {
+			isa = PBXGroup;
+			children = (
+				33A99AAE1BCDE2F50007CF82 /* AddEventsViewController.swift */,
+			);
+			name = "Add Events";
+			sourceTree = "<group>";
+		};
+		33EEF39F1BCC63CB002B1926 /* Model  */ = {
+			isa = PBXGroup;
+			children = (
+				332822341BC78BC300A51850 /* EventsData.swift */,
+				332822301BC782B500A51850 /* Events.swift */,
+			);
+			name = "Model ";
+			sourceTree = "<group>";
+		};
+		33EEF3A01BCC63E3002B1926 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				332822321BC788B000A51850 /* EventCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		33EEF3A21BCC640D002B1926 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				33A99AAD1BCDE2A20007CF82 /* Add Events */,
+				33A99AAC1BCCA6DC0007CF82 /* MyEvents view */,
+				33EEF3A51BCC6532002B1926 /* College view/picker */,
+				33EEF3A31BCC6430002B1926 /* Login/Register */,
+				33EEF39C1BCC623D002B1926 /* UIViewControllerExtension.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		33EEF3A31BCC6430002B1926 /* Login/Register */ = {
+			isa = PBXGroup;
+			children = (
+				33EEF3981BCC5F54002B1926 /* LoginViewController.swift */,
+				33EEF39A1BCC5FF8002B1926 /* RegisterViewController.swift */,
+			);
+			name = Login/Register;
+			sourceTree = "<group>";
+		};
+		33EEF3A41BCC6467002B1926 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				332822461BCAEEE900A51850 /* group-people-dancing-party-champagne-34069305.jpg */,
+				332822421BC7929B00A51850 /* Plus-25.png */,
+				332822401BC7928A00A51850 /* Add User-25.png */,
+				3328223E1BC7918F00A51850 /* Treasure Map-25.png */,
+				3328223C1BC7911500A51850 /* Slug-25.png */,
+				332822361BC790C700A51850 /* Calendar-50.png */,
+				332822371BC790C700A51850 /* Slug-50.png */,
+				332822381BC790C700A51850 /* Students-50.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		33EEF3A51BCC6532002B1926 /* College view/picker */ = {
+			isa = PBXGroup;
+			children = (
+				3328222A1BC7703800A51850 /* CollegePickerViewController.swift */,
+				3328222E1BC7733100A51850 /* CollegeViewTableViewController.swift */,
+			);
+			name = "College view/picker";
+			sourceTree = "<group>";
+		};
+		33EEF3BB1BCC68F0002B1926 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33A99AA31BCC781B0007CF82 /* ParseUI.framework */,
+				33A99A9D1BCC77E90007CF82 /* Bolts.framework */,
+				33A99A9E1BCC77E90007CF82 /* Parse.framework */,
+				33A99A9F1BCC77E90007CF82 /* libsqlite3.bundle */,
+				33EEF3C21BCC6EDF002B1926 /* libz.1.dylib */,
+				33EEF3C01BCC6EC5002B1926 /* libsqlite3.dylib */,
+				33EEF3B71BCC6793002B1926 /* AudioToolbox.framework */,
+				33EEF3B51BCC6789002B1926 /* CFNetwork.framework */,
+				33EEF3B31BCC6780002B1926 /* CoreGraphics.framework */,
+				33EEF3B11BCC6777002B1926 /* CoreLocation.framework */,
+				33EEF3AF1BCC6768002B1926 /* MobileCoreServices.framework */,
+				33EEF3AD1BCC674D002B1926 /* QuartzCore.framework */,
+				33EEF3AB1BCC671F002B1926 /* Security.framework */,
+				33EEF3A91BCC6715002B1926 /* StoreKit.framework */,
+				33EEF3A71BCC66FE002B1926 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +331,7 @@
 		221CC9431BC3103000EC8A51 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Tim Mertogul";
 				TargetAttributes = {
@@ -246,13 +396,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33EEF3991BCC5F54002B1926 /* LoginViewController.swift in Sources */,
+				33A99AAB1BCCA6D00007CF82 /* MyEventsViewController.swift in Sources */,
+				33EEF39B1BCC5FF8002B1926 /* RegisterViewController.swift in Sources */,
 				332822311BC782B500A51850 /* Events.swift in Sources */,
 				3328222B1BC7703800A51850 /* CollegePickerViewController.swift in Sources */,
 				332822351BC78BC300A51850 /* EventsData.swift in Sources */,
 				221CC9531BC3103100EC8A51 /* SecondViewController.swift in Sources */,
+				33A99AAF1BCDE2F50007CF82 /* AddEventsViewController.swift in Sources */,
 				221CC94F1BC3103100EC8A51 /* AppDelegate.swift in Sources */,
 				332822331BC788B000A51850 /* EventCell.swift in Sources */,
 				221CC9511BC3103100EC8A51 /* FirstViewController.swift in Sources */,
+				33EEF39D1BCC623D002B1926 /* UIViewControllerExtension.swift in Sources */,
 				3328222F1BC7733100A51850 /* CollegeViewTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,10 +537,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SlugLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Athlatex-cs115.SlugLife";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlugLife-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -393,10 +559,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SlugLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Athlatex-cs115.SlugLife";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlugLife-Bridging-Header.h";
 			};
 			name = Release;
 		};
