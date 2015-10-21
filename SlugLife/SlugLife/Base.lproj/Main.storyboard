@@ -348,7 +348,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add" id="wfj-cB-FCR">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="zRU-eH-Eih" kind="show" id="0FP-r0-EMd"/>
+                                <segue destination="zRU-eH-Eih" kind="show" id="ayN-mu-etu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -358,7 +358,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfd-7x-n0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="SPd-ij-BrZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1741.5" y="-669.5"/>
+            <point key="canvasLocation" x="1721.5" y="-669.5"/>
         </scene>
         <!--Add-->
         <scene sceneID="MKx-W0-Ybq">
@@ -397,13 +397,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WAC-RN-Ola">
-                                <rect key="frame" x="9" y="295" width="366" height="216"/>
-                                <animations/>
-                                <date key="date" timeIntervalSinceReferenceDate="466476989.56361198">
-                                    <!--2015-10-14 00:56:29 +0000-->
-                                </date>
-                            </datePicker>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -412,26 +405,27 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="w7R-El-lQf">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="cancelAdd:" id="ncB-O6-UEy"/>
+                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="cancelMyEvents:" id="rg6-dx-Xo0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="INf-Md-NTK">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="saveAdd:" id="axc-kS-qyS"/>
+                                <action selector="putEventFields:" destination="zRU-eH-Eih" id="UaR-Nq-HsD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="mydatepicker" destination="WAC-RN-Ola" id="2r8-cJ-uJ4"/>
+                        <outlet property="inputtedCollege" destination="cMm-Ky-mo2" id="Xym-YR-PZV"/>
+                        <outlet property="nameOfEvent" destination="SPA-j6-R1z" id="C7R-hT-Jsb"/>
                         <outlet property="selectedDate" destination="ceU-0z-nly" id="K3j-w1-RSF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGL-Az-3zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jPI-ag-y4r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2177.5" y="-669.5"/>
+            <point key="canvasLocation" x="2177.5" y="-675.5"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Z4K-kF-c1X">

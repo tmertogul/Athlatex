@@ -19,6 +19,12 @@ class LoginViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let user = PFUser.currentUser() {
+            if user.isAuthenticated() {
+                self.performSegueWithIdentifier(scrollViewWallSegue, sender: nil)
+            }
+        }
     }
 
     // MARK: - Actions

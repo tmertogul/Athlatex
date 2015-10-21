@@ -9,6 +9,8 @@
 import UIKit
 
 class MyEventsViewController: UIViewController {
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,10 @@ class MyEventsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func cancelMyEvents(segue:UIStoryboardSegue) {
+        print("here2")
     }
     
 
@@ -32,11 +38,7 @@ class MyEventsViewController: UIViewController {
     }
     */
     
-    @IBAction func cancelAdd(segue:UIStoryboardSegue) {
-    }
-    
-    @IBAction func saveAdd(segue:UIStoryboardSegue) {
-    }
+
 
 
 }

@@ -14,13 +14,6 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingImageView: UIImageView!
     
-    var event: events! {
-        didSet {
-            gameLabel.text = event.college
-            nameLabel.text = event.date
-            //ratingImageView.image = imageForRating(player.rating)
-        }
-    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

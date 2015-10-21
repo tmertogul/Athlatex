@@ -16,7 +16,7 @@
 		221CC9661BC3103100EC8A51 /* SlugLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CC9651BC3103100EC8A51 /* SlugLifeTests.swift */; };
 		3328222B1BC7703800A51850 /* CollegePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328222A1BC7703800A51850 /* CollegePickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3328222F1BC7733100A51850 /* CollegeViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328222E1BC7733100A51850 /* CollegeViewTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		332822311BC782B500A51850 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332822301BC782B500A51850 /* Events.swift */; settings = {ASSET_TAGS = (); }; };
+		332822311BC782B500A51850 /* EventPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332822301BC782B500A51850 /* EventPost.swift */; settings = {ASSET_TAGS = (); }; };
 		332822331BC788B000A51850 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332822321BC788B000A51850 /* EventCell.swift */; settings = {ASSET_TAGS = (); }; };
 		332822351BC78BC300A51850 /* EventsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332822341BC78BC300A51850 /* EventsData.swift */; settings = {ASSET_TAGS = (); }; };
 		332822391BC790C700A51850 /* Calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 332822361BC790C700A51850 /* Calendar-50.png */; settings = {ASSET_TAGS = (); }; };
@@ -73,7 +73,7 @@
 		221CC9671BC3103100EC8A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3328222A1BC7703800A51850 /* CollegePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegePickerViewController.swift; sourceTree = "<group>"; };
 		3328222E1BC7733100A51850 /* CollegeViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegeViewTableViewController.swift; sourceTree = "<group>"; };
-		332822301BC782B500A51850 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		332822301BC782B500A51850 /* EventPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPost.swift; sourceTree = "<group>"; };
 		332822321BC788B000A51850 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		332822341BC78BC300A51850 /* EventsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsData.swift; sourceTree = "<group>"; };
 		332822361BC790C700A51850 /* Calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-50.png"; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				332822341BC78BC300A51850 /* EventsData.swift */,
-				332822301BC782B500A51850 /* Events.swift */,
+				332822301BC782B500A51850 /* EventPost.swift */,
 			);
 			name = "Model ";
 			sourceTree = "<group>";
@@ -399,7 +399,7 @@
 				33EEF3991BCC5F54002B1926 /* LoginViewController.swift in Sources */,
 				33A99AAB1BCCA6D00007CF82 /* MyEventsViewController.swift in Sources */,
 				33EEF39B1BCC5FF8002B1926 /* RegisterViewController.swift in Sources */,
-				332822311BC782B500A51850 /* Events.swift in Sources */,
+				332822311BC782B500A51850 /* EventPost.swift in Sources */,
 				3328222B1BC7703800A51850 /* CollegePickerViewController.swift in Sources */,
 				332822351BC78BC300A51850 /* EventsData.swift in Sources */,
 				221CC9531BC3103100EC8A51 /* SecondViewController.swift in Sources */,
