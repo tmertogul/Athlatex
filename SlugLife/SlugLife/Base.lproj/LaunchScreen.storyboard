@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SlugLife" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DJ-lo-kcj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SlugLife" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DJ-lo-kcj">
                                 <rect key="frame" x="186" y="94" width="228" height="73"/>
                                 <animations/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="62"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="gyd-QL-mye">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="gyd-QL-mye">
                                 <rect key="frame" x="150" y="216" width="300" height="254"/>
                                 <animations/>
                             </imageView>
@@ -34,8 +34,6 @@
                             <constraint firstItem="9DJ-lo-kcj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6dv-ed-Rhb"/>
                             <constraint firstItem="gyd-QL-mye" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="M7q-OU-eCA"/>
                             <constraint firstItem="gyd-QL-mye" firstAttribute="centerX" secondItem="9DJ-lo-kcj" secondAttribute="centerX" id="V6q-ON-2PD"/>
-                            <constraint firstItem="gyd-QL-mye" firstAttribute="top" secondItem="9DJ-lo-kcj" secondAttribute="bottom" constant="49" id="bUU-LC-dbY"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="gyd-QL-mye" secondAttribute="bottom" constant="130" id="qye-7s-8nw"/>
                             <constraint firstItem="gyd-QL-mye" firstAttribute="centerX" secondItem="9DJ-lo-kcj" secondAttribute="centerX" id="yWu-dy-Kmh"/>
                         </constraints>
                     </view>
