@@ -38,8 +38,5 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func logOutPressed(segue:UIStoryboardSegue) {
-    }
     
-
 }

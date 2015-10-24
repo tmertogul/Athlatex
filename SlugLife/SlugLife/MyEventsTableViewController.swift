@@ -21,7 +21,11 @@ class MyEventsTableViewController: PFQueryTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelMyEvents(segue:UIStoryboardSegue) {
+    @IBAction func cancelAddEvents(segue:UIStoryboardSegue) {
+        print("here2")
+    }
+    
+    @IBAction func hitDoneButton(segue:UIStoryboardSegue) {
         print("here2")
     }
     
@@ -73,4 +77,12 @@ class MyEventsTableViewController: PFQueryTableViewController {
         return cell
     }
     
+    @IBAction func logOutPressed(sender: AnyObject) {
+        print("debug logout")
+        PFUser.logOut()
+        //[self.view.window.rootViewController dismissModalViewControlerAnimated:YES];
+       //navigationController?.popToRootViewControllerAnimated(true)
+        navigationController?.popToRootViewControllerAnimated(true)
+        //navigationController?.popToViewController(viewController: LoginViewController, animated: true)
+    }
 }

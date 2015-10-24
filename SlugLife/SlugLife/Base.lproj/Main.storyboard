@@ -325,7 +325,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="pgQ-gA-i1r" id="A2S-Wd-suB"/>
                         <outlet property="userTextField" destination="aoS-hh-C5s" id="T42-rb-hVN"/>
-                        <segue destination="bt1-1V-qMk" kind="show" identifier="LoginSuccesful" id="kBu-rR-pNU"/>
+                        <segue destination="tAG-NB-qa2" kind="show" identifier="LoginSuccesful" id="AoD-RE-hhw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfH-Xh-Pri" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,6 +369,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-Vq-V6B">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Add Event" id="Smo-fO-DPM">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m7k-SI-yBx">
+                                            <connections>
+                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="cancelAddEvents:" id="FCk-la-KR4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Gcp-Ly-Po9">
+                                            <connections>
+                                                <action selector="putEventFields:" destination="zRU-eH-Eih" id="NH0-NO-8yl"/>
+                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="hitDoneButton:" id="a8q-Sa-2dr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -397,7 +416,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGL-Az-3zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jPI-ag-y4r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2408.5" y="-219.5"/>
+            <point key="canvasLocation" x="2188.5" y="-158.5"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Z4K-kF-c1X">
@@ -440,12 +459,12 @@
                     <connections>
                         <outlet property="passwordTextField" destination="ZA4-Ju-F4e" id="m2h-bh-p0e"/>
                         <outlet property="userTextField" destination="1ah-0m-yja" id="fMT-CV-28m"/>
-                        <segue destination="bt1-1V-qMk" kind="show" identifier="SignupSuccesful" id="lMF-Q9-3yn"/>
+                        <segue destination="tAG-NB-qa2" kind="show" identifier="SignupSuccesful" id="YmV-ww-WAd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Moi-DG-DrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305.5" y="-1072.5"/>
+            <point key="canvasLocation" x="1265.5" y="-1254.5"/>
         </scene>
         <!--My Events-->
         <scene sceneID="Q9d-rh-dJJ">
@@ -504,6 +523,9 @@
                     <navigationItem key="navigationItem" title="My Events" id="n7I-CF-LR4">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="VQn-r5-3LO">
                             <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logOutPressed:" destination="tAG-NB-qa2" id="Ngj-pk-sML"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="u3R-cZ-R9B">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -515,16 +537,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wW-PC-2u2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationBar contentMode="scaleToFill" id="RF9-bG-qLe">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                    <items>
-                        <navigationItem title="Title" id="pwW-bB-voh"/>
-                    </items>
-                </navigationBar>
             </objects>
-            <point key="canvasLocation" x="1839.5" y="-219.5"/>
+            <point key="canvasLocation" x="1325.5" y="-158.5"/>
         </scene>
         <!--Events-->
         <scene sceneID="LsX-fX-RLQ">
@@ -599,27 +613,6 @@
             </objects>
             <point key="canvasLocation" x="37.5" y="-219.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="X25-5F-sfh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bt1-1V-qMk" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mem-Lv-pFj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tAG-NB-qa2" kind="relationship" relationship="rootViewController" id="nQb-98-TcO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdw-KR-vWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1305.5" y="-219.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Plus-25.png" width="25" height="25"/>
@@ -628,6 +621,6 @@
         <image name="UCSCMap" width="1728" height="2592"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lMF-Q9-3yn"/>
+        <segue reference="YmV-ww-WAd"/>
     </inferredMetricsTieBreakers>
 </document>
