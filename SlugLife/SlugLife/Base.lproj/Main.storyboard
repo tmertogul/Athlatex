@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +22,7 @@
                                 <barButtonItem width="91" style="plain" systemItem="fixedSpace" id="waz-Hd-Wz3"/>
                                 <barButtonItem style="plain" id="2Xr-zR-dNf">
                                     <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="1VM-ne-6mj">
-                                        <rect key="frame" x="107" y="6.5" width="161" height="31"/>
+                                        <rect key="frame" x="107" y="7" width="161" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <segments>
@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="136" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YeY-ES-Zlb" id="13X-lx-RMS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbx-v1-pPF">
@@ -325,7 +325,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="pgQ-gA-i1r" id="A2S-Wd-suB"/>
                         <outlet property="userTextField" destination="aoS-hh-C5s" id="T42-rb-hVN"/>
-                        <segue destination="bt1-1V-qMk" kind="show" identifier="LoginSuccesful" id="kBu-rR-pNU"/>
+                        <segue destination="tAG-NB-qa2" kind="show" identifier="LoginSuccesful" id="AoD-RE-hhw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfH-Xh-Pri" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,20 +369,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eeb-0q-4f3">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-Vq-V6B">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="Add Event" id="G6T-6E-V0i">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="z2o-nF-7oj">
+                                    <navigationItem title="Add Event" id="Smo-fO-DPM">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m7k-SI-yBx">
                                             <connections>
-                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="cancelMyEvents:" id="FG2-lF-Yeb"/>
+                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="cancelAddEvents:" id="FCk-la-KR4"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="llw-kT-wxy">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Gcp-Ly-Po9">
                                             <connections>
-                                                <action selector="putEventFields:" destination="zRU-eH-Eih" id="6Jm-Gk-AgC"/>
-                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="hitTheDoneButton:" id="GOT-ow-n3t"/>
+                                                <action selector="putEventFields:" destination="zRU-eH-Eih" id="NH0-NO-8yl"/>
+                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="hitDoneButton:" id="a8q-Sa-2dr"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -416,7 +416,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGL-Az-3zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jPI-ag-y4r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2261.5" y="-206.5"/>
+            <point key="canvasLocation" x="2188.5" y="-158.5"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Z4K-kF-c1X">
@@ -459,12 +459,12 @@
                     <connections>
                         <outlet property="passwordTextField" destination="ZA4-Ju-F4e" id="m2h-bh-p0e"/>
                         <outlet property="userTextField" destination="1ah-0m-yja" id="fMT-CV-28m"/>
-                        <segue destination="bt1-1V-qMk" kind="show" identifier="SignupSuccesful" id="lMF-Q9-3yn"/>
+                        <segue destination="tAG-NB-qa2" kind="show" identifier="SignupSuccesful" id="YmV-ww-WAd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Moi-DG-DrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305.5" y="-1072.5"/>
+            <point key="canvasLocation" x="1265.5" y="-1254.5"/>
         </scene>
         <!--My Events-->
         <scene sceneID="Q9d-rh-dJJ">
@@ -480,7 +480,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8W-OE-7tF" id="Q8a-3E-cTV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA6-5n-C2b">
@@ -523,6 +523,9 @@
                     <navigationItem key="navigationItem" title="My Events" id="n7I-CF-LR4">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="VQn-r5-3LO">
                             <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logOutPressed:" destination="tAG-NB-qa2" id="Ngj-pk-sML"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="u3R-cZ-R9B">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -534,16 +537,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wW-PC-2u2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationBar contentMode="scaleToFill" id="RF9-bG-qLe">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                    <items>
-                        <navigationItem title="Title" id="pwW-bB-voh"/>
-                    </items>
-                </navigationBar>
             </objects>
-            <point key="canvasLocation" x="1839.5" y="-219.5"/>
+            <point key="canvasLocation" x="1325.5" y="-158.5"/>
         </scene>
         <!--Events-->
         <scene sceneID="LsX-fX-RLQ">
@@ -618,27 +613,6 @@
             </objects>
             <point key="canvasLocation" x="37.5" y="-219.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="X25-5F-sfh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bt1-1V-qMk" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mem-Lv-pFj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tAG-NB-qa2" kind="relationship" relationship="rootViewController" id="nQb-98-TcO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdw-KR-vWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1305.5" y="-219.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Plus-25.png" width="25" height="25"/>
@@ -647,6 +621,6 @@
         <image name="UCSCMap" width="1728" height="2592"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lMF-Q9-3yn"/>
+        <segue reference="YmV-ww-WAd"/>
     </inferredMetricsTieBreakers>
 </document>
