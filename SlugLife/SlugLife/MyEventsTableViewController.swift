@@ -25,6 +25,9 @@ class MyEventsTableViewController: PFQueryTableViewController {
         print("here2")
     }
     
+    @IBAction func hitTheDoneButton(segue:UIStoryboardSegue) {
+        print("here0")
+    }
     
     /*
     // MARK: - Navigation
