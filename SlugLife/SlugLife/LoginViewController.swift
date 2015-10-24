@@ -19,27 +19,10 @@ class LoginViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let user = PFUser.currentUser() {
-            if user.isAuthenticated() {
-                self.performSegueWithIdentifier(scrollViewWallSegue, sender: nil)
-            }
-        }
     }
 
     // MARK: - Actions
     @IBAction func logInPressed(sender: AnyObject) {
-        PFUser.logInWithUsernameInBackground(userTextField.text!, password: passwordTextField.text!) { user, error in
-            if user != nil {
-                self.performSegueWithIdentifier(self.scrollViewWallSegue, sender: nil)
-            } else if let error = error {
-                self.showErrorView(error)
-            }
-        }
+        performSegueWithIdentifier(scrollViewWallSegue, sender: nil)
     }
-    
-    @IBAction func logOutPressed(segue:UIStoryboardSegue) {
-    }
-    
-
 }
