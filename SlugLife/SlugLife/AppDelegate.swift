@@ -6,15 +6,30 @@
 //  Copyright © 2015 Tim Mertogul. All rights reserved.
 //
 
+import Parse
+import Bolts
 import UIKit
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+   
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("sHCCOiFfaq2BJufiZQiSLw9fyqgURlQVQYYJEH4n",
+            clientKey: "UoNZHPR7TMEZPMO4sws4ev8hhbFYi9tyQzdFfYvm")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
         
         // Override point for customization after application launch.
         return true
