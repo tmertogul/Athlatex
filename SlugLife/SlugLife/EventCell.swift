@@ -10,9 +10,9 @@ import UIKit
 
 class EventCell: UITableViewCell {
     
-    @IBOutlet weak var gameLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var ratingImageView: UIImageView!
+    @IBOutlet var gameLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var ratingImageView: UIImageView!
     
 
     override func awakeFromNib() {
