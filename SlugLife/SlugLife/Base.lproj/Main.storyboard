@@ -325,7 +325,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="pgQ-gA-i1r" id="A2S-Wd-suB"/>
                         <outlet property="userTextField" destination="aoS-hh-C5s" id="T42-rb-hVN"/>
-                        <segue destination="bt1-1V-qMk" kind="show" identifier="LoginSuccesful" id="kBu-rR-pNU"/>
+                        <segue destination="tAG-NB-qa2" kind="show" identifier="LoginSuccesful" id="AoD-RE-hhw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfH-Xh-Pri" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,20 +369,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eeb-0q-4f3">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-Vq-V6B">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="Add Event" id="G6T-6E-V0i">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="z2o-nF-7oj">
+                                    <navigationItem title="Add Event" id="Smo-fO-DPM">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m7k-SI-yBx">
                                             <connections>
-                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="cancelMyEvents:" id="FG2-lF-Yeb"/>
+                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="cancelAddEvents:" id="FCk-la-KR4"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="llw-kT-wxy">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Gcp-Ly-Po9">
                                             <connections>
-                                                <action selector="putEventFields:" destination="zRU-eH-Eih" id="6Jm-Gk-AgC"/>
-                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="hitTheDoneButton:" id="GOT-ow-n3t"/>
+                                                <action selector="putEventFields:" destination="zRU-eH-Eih" id="NH0-NO-8yl"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -416,7 +415,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGL-Az-3zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jPI-ag-y4r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2261.5" y="-206.5"/>
+            <point key="canvasLocation" x="1793.5" y="-158.5"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Z4K-kF-c1X">
@@ -459,46 +458,47 @@
                     <connections>
                         <outlet property="passwordTextField" destination="ZA4-Ju-F4e" id="m2h-bh-p0e"/>
                         <outlet property="userTextField" destination="1ah-0m-yja" id="fMT-CV-28m"/>
-                        <segue destination="bt1-1V-qMk" kind="show" identifier="SignupSuccesful" id="lMF-Q9-3yn"/>
+                        <segue destination="tAG-NB-qa2" kind="show" identifier="SignupSuccesful" id="YmV-ww-WAd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Moi-DG-DrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305.5" y="-1072.5"/>
+            <point key="canvasLocation" x="1265.5" y="-1254.5"/>
         </scene>
         <!--My Events-->
         <scene sceneID="Q9d-rh-dJJ">
             <objects>
                 <tableViewController id="tAG-NB-qa2" customClass="MyEventsTableViewController" customModule="SlugLife" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ve4-s3-Z5G">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="ve4-s3-Z5G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventPostCell" rowHeight="110" id="o8W-OE-7tF" customClass="EventPostTableViewCell" customModule="SlugLife" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="110"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="EventPostTableViewCell" id="o8W-OE-7tF" customClass="EventPostTableViewCell" customModule="SlugLife" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8W-OE-7tF" id="Q8a-3E-cTV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA6-5n-C2b">
-                                            <rect key="frame" x="51" y="0.0" width="278" height="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA6-5n-C2b">
+                                            <rect key="frame" x="20" y="8" width="249" height="26"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zg-jG-fb2">
+                                            <rect key="frame" x="20" y="67" width="249" height="32.5"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-Nj-E8F">
-                                            <rect key="frame" x="51" y="39" width="302" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zg-jG-fb2">
-                                            <rect key="frame" x="51" y="78" width="316" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-Nj-E8F">
+                                            <rect key="frame" x="20" y="42" width="186" height="23"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -515,6 +515,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="tAG-NB-qa2" id="ARC-jQ-A3z"/>
                             <outlet property="delegate" destination="tAG-NB-qa2" id="xbl-Pe-3ML"/>
@@ -523,27 +524,22 @@
                     <navigationItem key="navigationItem" title="My Events" id="n7I-CF-LR4">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="VQn-r5-3LO">
                             <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logOutPressed:" destination="tAG-NB-qa2" id="Ngj-pk-sML"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="u3R-cZ-R9B">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="zRU-eH-Eih" kind="showDetail" id="5Nn-Wb-p4L"/>
+                                <segue destination="zRU-eH-Eih" kind="show" id="S8S-TP-Vjm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wW-PC-2u2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationBar contentMode="scaleToFill" id="RF9-bG-qLe">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                    <items>
-                        <navigationItem title="Title" id="pwW-bB-voh"/>
-                    </items>
-                </navigationBar>
             </objects>
-            <point key="canvasLocation" x="1839.5" y="-219.5"/>
+            <point key="canvasLocation" x="1325.5" y="-158.5"/>
         </scene>
         <!--Events-->
         <scene sceneID="LsX-fX-RLQ">
@@ -618,27 +614,6 @@
             </objects>
             <point key="canvasLocation" x="37.5" y="-219.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="X25-5F-sfh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bt1-1V-qMk" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mem-Lv-pFj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tAG-NB-qa2" kind="relationship" relationship="rootViewController" id="nQb-98-TcO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdw-KR-vWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1305.5" y="-219.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Plus-25.png" width="25" height="25"/>
@@ -647,6 +622,6 @@
         <image name="UCSCMap" width="1728" height="2592"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lMF-Q9-3yn"/>
+        <segue reference="YmV-ww-WAd"/>
     </inferredMetricsTieBreakers>
 </document>

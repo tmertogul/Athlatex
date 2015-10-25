@@ -41,7 +41,7 @@ class AddEventsViewController: UIViewController {
     // Pass the selected object to the new view controller.
     }
     */
-    
+
     
    
     
@@ -74,16 +74,20 @@ class AddEventsViewController: UIViewController {
                 })
         
         
+        
     }
     
     func saveEventPost(file: PFObject)
+        
     {
         //1
+        print ( selectedDate.text);
         let wallPost = EventPost(nameStr: nameOfEvent.text!, collegeStr: inputtedCollege.text!, dateStr: selectedDate.text!, user: PFUser.currentUser()!)
         //2
         wallPost.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
                 //3
+               
                 self.navigationController?.popViewControllerAnimated(true)
             } else {
                 //4

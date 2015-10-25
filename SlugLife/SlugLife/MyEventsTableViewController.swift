@@ -21,13 +21,11 @@ class MyEventsTableViewController: PFQueryTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelMyEvents(segue:UIStoryboardSegue) {
+    @IBAction func cancelAddEvents(segue:UIStoryboardSegue) {
         print("here2")
     }
     
-    @IBAction func hitTheDoneButton(segue:UIStoryboardSegue) {
-        print("here0")
-    }
+
     
     /*
     // MARK: - Navigation
@@ -44,36 +42,54 @@ class MyEventsTableViewController: PFQueryTableViewController {
     }
     
     override func queryForTable() -> PFQuery {
+        let curr_user_id = PFUser.currentUser()
         let query = EventPost.query()
+        query?.whereKey("user", equalTo: curr_user_id!)
         return query!
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
-        // 1
-        let cell = tableView.dequeueReusableCellWithIdentifier("eventPostCell", forIndexPath: indexPath) as!EventPostTableViewCell
         
-        // 2
-        let wallPost = object as! EventPost
+        print("goes here")
         
+        let  cell =  tableView.dequeueReusableCellWithIdentifier("EventPostTableViewCell", forIndexPath: indexPath) as!EventPostTableViewCell
         
-        // 4
-        let creationDate = wallPost.createdAt
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm dd/MM yyyy"
-        let dateString = dateFormatter.stringFromDate(creationDate!)
+    cell.layoutIfNeeded()
+            
+           
+            
+            // 2
+            let wallPost = object as! EventPost
+            
+            let creationDate = wallPost.createdAt
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "HH:mm dd/MM yyyy"
+            let dateString = dateFormatter.stringFromDate(creationDate!)
+            
         
-        if let username = wallPost.user.username {
-            cell.Event.text = "Uploaded by: \(username), \(dateString)"
-        } else {
-            cell.college.text = "Uploaded by anonymous: , \(dateString)"
-        }
+                //let username = wallPost.user.username
+                cell.Event.text = wallPost.nameStr;
+                cell.college.text = wallPost.collegeStr;
+                cell.datetime.text = wallPost.dateStr;
         
-        cell.datetime.text = "Uploaded by: \(wallPost.user.username), \(dateString)"
+            
+            
+           // cell.datetime.text = "Uploaded by: \(wallPost.user.username), \(dateString)"
+            
+            
+            
         
-        // cell.commentLabel.text = EventPost.comment
         
         return cell
     }
     
+    @IBAction func logOutPressed(sender: AnyObject) {
+        print("debug logout")
+        PFUser.logOut()
+        //[self.view.window.rootViewController dismissModalViewControlerAnimated:YES];
+       //navigationController?.popToRootViewControllerAnimated(true)
+        navigationController?.popToRootViewControllerAnimated(true)
+        //navigationController?.popToViewController(viewController: LoginViewController, animated: true)
+    }
 }

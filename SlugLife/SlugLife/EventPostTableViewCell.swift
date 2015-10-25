@@ -11,8 +11,8 @@ import Foundation
 import UIKit
 
 class EventPostTableViewCell: PFTableViewCell {
-    @IBOutlet weak var Event: UILabel!
-    @IBOutlet weak var college: UILabel!
-    @IBOutlet weak var datetime: UILabel!
+    @IBOutlet  var Event: UILabel!
+    @IBOutlet  var college: UILabel!
+    @IBOutlet  var datetime: UILabel!
     
 }
