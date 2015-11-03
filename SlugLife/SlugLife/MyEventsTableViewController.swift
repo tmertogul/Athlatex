@@ -9,10 +9,13 @@
 import UIKit
 
 class MyEventsTableViewController: PFQueryTableViewController {
+    var objectIdToPass = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+
         // Do any additional setup after loading the view.
     }
     
@@ -22,13 +25,14 @@ class MyEventsTableViewController: PFQueryTableViewController {
     }
     
     @IBAction func cancelAddEvents(segue:UIStoryboardSegue) {
-        print("here2")
+        print("cancelAddEvents func in MyEventsTabController")
     }
     
-    @IBAction func hitDoneButton(segue:UIStoryboardSegue) {
-        print("here2")
-    }
     
+    @IBAction func cancelEditEvents(segue:UIStoryboardSegue) {
+        print("cancelAddEvents func in MyEventsTabController")
+    }
+
     
     /*
     // MARK: - Navigation
@@ -45,34 +49,78 @@ class MyEventsTableViewController: PFQueryTableViewController {
     }
     
     override func queryForTable() -> PFQuery {
+        let curr_user_id = PFUser.currentUser()
         let query = EventPost.query()
+        query?.whereKey("user", equalTo: curr_user_id!)
         return query!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let row = indexPath.row
+        print("Row: \(row)")
+        
+        
+        
+        let object = objectAtIndexPath(indexPath) as! EventPost
+        self.objectIdToPass = object.objectId!
+        print("Here",self.objectIdToPass)
+        
+        performSegueWithIdentifier("segueToEdit", sender: self)
+        
+        
+        
+        
+    }
+    
+    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!) {
+        if segue.identifier == "segueToEdit" {
+            // Setup new view controller
+            let destination = segue.destinationViewController as?  EditPostsViewController
+            destination?.objectIdPassed = self.objectIdToPass
+            
+        }
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
-        // 1
-        let cell = tableView.dequeueReusableCellWithIdentifier("eventPostCell", forIndexPath: indexPath) as!EventPostTableViewCell
         
-        // 2
+        print("goes here")
+        
+        let  cell =  tableView.dequeueReusableCellWithIdentifier("EventPostTableViewCell", forIndexPath: indexPath) as!EventPostTableViewCell
+        
+        cell.layoutIfNeeded()
+            
+        if(indexPath.row % 2 == 0) {
+            let backcolor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+            cell.backgroundColor = backcolor
+        } else {
+            let backcolor = UIColor(red: 255, green: 255, blue: 0, alpha: 0.4)
+            cell.backgroundColor = backcolor
+        }
+        
+            // 2
         let wallPost = object as! EventPost
-        
-        
-        // 4
+            
         let creationDate = wallPost.createdAt
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm dd/MM yyyy"
         let dateString = dateFormatter.stringFromDate(creationDate!)
+            
         
-        if let username = wallPost.user.username {
-            cell.Event.text = "Uploaded by: \(username), \(dateString)"
-        } else {
-            cell.college.text = "Uploaded by anonymous: , \(dateString)"
-        }
+        //let username = wallPost.user.username
+        cell.Event.text = wallPost.nameStr;
+        cell.college.text = wallPost.collegeStr;
+        cell.datetime.text = wallPost.dateStr;
         
-        cell.datetime.text = "Uploaded by: \(wallPost.user.username), \(dateString)"
         
-        // cell.commentLabel.text = EventPost.comment
+            
+            
+           // cell.datetime.text = "Uploaded by: \(wallPost.user.username), \(dateString)"
+            
+            
+            
+        
         
         return cell
     }
@@ -80,9 +128,15 @@ class MyEventsTableViewController: PFQueryTableViewController {
     @IBAction func logOutPressed(sender: AnyObject) {
         print("debug logout")
         PFUser.logOut()
+        if(PFUser.currentUser() == nil){
+            print("yes logged out")
+            
+        }
+        
+        
+        
         //[self.view.window.rootViewController dismissModalViewControlerAnimated:YES];
        //navigationController?.popToRootViewControllerAnimated(true)
-        navigationController?.popToRootViewControllerAnimated(true)
-        //navigationController?.popToViewController(viewController: LoginViewController, animated: true)
+        //navigationController?.navigationController?.popToRootViewControllerAnimated(true)
     }
 }

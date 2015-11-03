@@ -30,7 +30,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
-        
+        if(PFUser.currentUser() != nil){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // instantiate your desired ViewController
+            let rootController = storyboard.instantiateViewControllerWithIdentifier("MyViewController")
+            // Because self.window is an optional you should check it's value first and assign your rootViewController
+            if self.window != nil {
+                self.window!.rootViewController = rootController
+            }
+        }else{
+            //print(" here")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // instantiate your desired ViewController
+            let rootController = storyboard.instantiateViewControllerWithIdentifier("Login")
+            // Because self.window is an optional you should check it's value first and assign your rootViewController
+            if self.window != nil {
+                self.window!.rootViewController = rootController
+            }
+        }
         // Override point for customization after application launch.
         return true
     }

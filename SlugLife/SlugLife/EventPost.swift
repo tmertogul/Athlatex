@@ -15,6 +15,7 @@ class EventPost: PFObject , PFSubclassing {
     @NSManaged var nameStr: String!
     @NSManaged var collegeStr: String!
     @NSManaged var dateStr: String!
+    @NSManaged var descrip: String!
     //@NSManaged var image: PFFile
     @NSManaged var user: PFUser
     
@@ -35,12 +36,13 @@ class EventPost: PFObject , PFSubclassing {
 }
 
     //our constructor to allow us to create a separate event post
-    init(nameStr: String, collegeStr: String, dateStr: String, user: PFUser) {
+    init(nameStr: String, collegeStr: String, dateStr: String, descrip: String, user: PFUser) {
         super.init()
         
         self.nameStr = nameStr
         self.collegeStr = collegeStr
         self.dateStr = dateStr
+        self.descrip = descrip
         self.user = user
     }
     
