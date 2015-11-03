@@ -13,6 +13,7 @@ class AddEventsViewController: UIViewController {
     @IBOutlet weak var nameOfEvent: UITextField!
     @IBOutlet weak var inputtedCollege: UITextField!
     @IBOutlet weak var selectedDate: UITextField!
+    @IBOutlet weak var descrip: UITextField!
     
     var username: String?
     
@@ -56,7 +57,7 @@ class AddEventsViewController: UIViewController {
         nameOfEvent.resignFirstResponder()
         inputtedCollege.resignFirstResponder()
         selectedDate.resignFirstResponder()
-        
+        descrip.resignFirstResponder()
         
         //Disable the Done button until we are ready
         navigationItem.rightBarButtonItem?.enabled = false
@@ -82,7 +83,7 @@ class AddEventsViewController: UIViewController {
     {
         //1
         print ( selectedDate.text);
-        let wallPost = EventPost(nameStr: nameOfEvent.text!, collegeStr: inputtedCollege.text!, dateStr: selectedDate.text!, user: PFUser.currentUser()!)
+        let wallPost = EventPost(nameStr: nameOfEvent.text!, collegeStr: inputtedCollege.text!, dateStr: selectedDate.text!, descrip: descrip.text! ,user: PFUser.currentUser()!)
         //2
         wallPost.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {
