@@ -31,7 +31,13 @@
                                             <segment title="College"/>
                                         </segments>
                                         <color key="tintColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="segmentedControlChanged:" destination="ckt-NM-1hA" eventType="valueChanged" id="MzF-Ea-Zhr"/>
+                                        </connections>
                                     </segmentedControl>
+                                    <connections>
+                                        <action selector="segmentedControlChanged:" destination="ckt-NM-1hA" id="9U2-l2-1Tv"/>
+                                    </connections>
                                 </barButtonItem>
                             </items>
                             <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
