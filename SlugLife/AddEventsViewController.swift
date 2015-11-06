@@ -8,31 +8,45 @@
 
 import UIKit
 
-class AddEventsViewController: UIViewController {
+class AddEventsViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var nameOfEvent: UITextField!
     @IBOutlet weak var inputtedCollege: UITextField!
     @IBOutlet weak var selectedDate: UITextField!
     @IBOutlet weak var descrip: UITextField!
     
+    @IBOutlet weak var dateSelected: UILabel!
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
+    @IBAction func datePickerAction(sender: AnyObject) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let strDate = dateFormatter.stringFromDate(myDatePicker.date)
+        self.dateSelected.text = strDate
+    }
+
+    /*  code to format the date into a string
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    @IBOutlet weak var dateSelected: UILabel!
+    @IBAction func datePickerAction(sender: AnyObject) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let strDate = dateFormatter.stringFromDate(myDatePicker.date)
+        self.dateSelected.text = strDate
+    }*/
+    
     var username: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         // Do any additional setup after loading the view.
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     /*
     // MARK: - Navigation
@@ -42,10 +56,33 @@ class AddEventsViewController: UIViewController {
     // Pass the selected object to the new view controller.
     }
     */
+    
+    // begin popover code
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDate"
+        {
+            let vc = segue.destinationViewController
+            
+            let controller = vc.presentationController
+            
+            if controller != nil
+            {
+                controller?.delegate = self
+            }
+        }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return.None
+    }
     
    
-    
+    @IBAction func dateButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("showDate", sender: self)
+    }
+
+    // end popover code
     
     //Get  outlets put into our events database
     //when Done is pressed
@@ -58,6 +95,7 @@ class AddEventsViewController: UIViewController {
         inputtedCollege.resignFirstResponder()
         selectedDate.resignFirstResponder()
         descrip.resignFirstResponder()
+        //myDatePicker.resignFirstResponder()
         
         //Disable the Done button until we are ready
         navigationItem.rightBarButtonItem?.enabled = false
@@ -73,9 +111,6 @@ class AddEventsViewController: UIViewController {
                     self.showErrorView(error)
                 }
                 })
-        
-        
-        
     }
     
     func saveEventPost(file: PFObject)
@@ -83,7 +118,7 @@ class AddEventsViewController: UIViewController {
     {
         //1
         print ( selectedDate.text);
-        let wallPost = EventPost(nameStr: nameOfEvent.text!, collegeStr: inputtedCollege.text!, dateStr: selectedDate.text!, descrip: descrip.text! ,user: PFUser.currentUser()!)
+        let wallPost = EventPost(nameStr: nameOfEvent.text!, collegeStr: inputtedCollege.text!, dateStr: selectedDate.description, descrip: descrip.text!, user: PFUser.currentUser()!)
         //2
         wallPost.saveInBackgroundWithBlock{ succeeded, error in
             if succeeded {

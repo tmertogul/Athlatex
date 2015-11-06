@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -281,6 +281,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="S15-jx-A63">
+                                <rect key="frame" x="0.0" y="368" width="375" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="468534742.99937302">
+                                    <!--2015-11-06 20:32:22 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="zRU-eH-Eih" eventType="valueChanged" id="FYn-Zk-kim"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V00-Iv-vh4">
+                                <rect key="frame" x="20" y="260" width="335" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,10 +318,11 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="dateSelected" destination="V00-Iv-vh4" id="2pg-iw-UGQ"/>
                         <outlet property="descrip" destination="cCC-CB-MUn" id="rJi-dj-36U"/>
                         <outlet property="inputtedCollege" destination="cMm-Ky-mo2" id="Xym-YR-PZV"/>
+                        <outlet property="myDatePicker" destination="S15-jx-A63" id="qxl-8B-lcf"/>
                         <outlet property="nameOfEvent" destination="SPA-j6-R1z" id="C7R-hT-Jsb"/>
-                        <outlet property="selectedDate" destination="ceU-0z-nly" id="K3j-w1-RSF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGL-Az-3zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -476,20 +494,26 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <animations/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T8N-Dc-4NI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new username" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T8N-Dc-4NI">
                                 <rect key="frame" x="39" y="98" width="296" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIe-sQ-A2V">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new password" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIe-sQ-A2V">
                                 <rect key="frame" x="39" y="150" width="296" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new password again" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpz-28-9fz" userLabel="Password Text Field Two">
+                                <rect key="frame" x="39" y="201" width="296" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD4-Vq-mAC">
-                                <rect key="frame" x="206" y="218" width="129" height="50"/>
+                                <rect key="frame" x="206" y="243" width="129" height="50"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Signup"/>
@@ -498,7 +522,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdq-X4-EnM">
-                                <rect key="frame" x="39" y="223" width="95" height="40"/>
+                                <rect key="frame" x="39" y="248" width="95" height="40"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Cancel"/>
@@ -513,6 +537,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="passwordTextField" destination="uIe-sQ-A2V" id="bP0-Nk-det"/>
+                        <outlet property="passwordTextFieldTwo" destination="Dpz-28-9fz" id="lH6-AY-rit"/>
                         <outlet property="userTextField" destination="T8N-Dc-4NI" id="jze-Nu-gC2"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="SignupSuccessful" id="Z8r-jZ-7uc"/>
                     </connections>
@@ -567,7 +592,7 @@
                                 <rect key="frame" x="42" y="162" width="290" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Registered?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtM-Re-QWa">
                                 <rect key="frame" x="42" y="269" width="137" height="33"/>
@@ -754,7 +779,7 @@
         <image name="UCSCMap" width="1728" height="2592"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y8d-Lt-OaO"/>
+        <segue reference="Z8r-jZ-7uc"/>
         <segue reference="e9s-Ks-A3e"/>
     </inferredMetricsTieBreakers>
 </document>

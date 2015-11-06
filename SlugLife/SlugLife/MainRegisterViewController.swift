@@ -12,6 +12,7 @@ class MainRegisterViewController: UIViewController {
     
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextFieldTwo: UITextField!
     
     let scrollViewWallSegue = "SignupSuccessful"
     let tableViewWallSegue = "SignupSuccesfulTable"
@@ -26,10 +27,16 @@ class MainRegisterViewController: UIViewController {
     // MARK: - Actions
     @IBAction func signUpPressed(sender: AnyObject) {
         let user = PFUser()
-        user.username = userTextField.text
-        user.password = passwordTextField.text
         
-        print("here")
+        if(passwordTextField.text == passwordTextFieldTwo.text){
+            print("Passwords match!")
+            user.username = userTextField.text
+            user.password = passwordTextField.text
+        } else {
+            print("Passwords do not match")
+            //gprint(error)
+        }
+        //print("here")
         
         
         //TODO
