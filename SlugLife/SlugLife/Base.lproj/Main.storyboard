@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +22,7 @@
                                 <barButtonItem width="91" style="plain" systemItem="fixedSpace" id="waz-Hd-Wz3"/>
                                 <barButtonItem style="plain" id="2Xr-zR-dNf">
                                     <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="1VM-ne-6mj">
-                                        <rect key="frame" x="107" y="7" width="161" height="31"/>
+                                        <rect key="frame" x="107" y="6.5" width="161" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <segments>
@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="136" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YeY-ES-Zlb" id="13X-lx-RMS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbx-v1-pPF">
@@ -382,7 +382,6 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Gcp-Ly-Po9">
                                             <connections>
                                                 <action selector="putEventFields:" destination="zRU-eH-Eih" id="NH0-NO-8yl"/>
-                                                <segue destination="jPI-ag-y4r" kind="unwind" unwindAction="hitDoneButton:" id="a8q-Sa-2dr"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -416,7 +415,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGL-Az-3zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jPI-ag-y4r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2188.5" y="-158.5"/>
+            <point key="canvasLocation" x="1793.5" y="-158.5"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Z4K-kF-c1X">
@@ -470,35 +469,36 @@
         <scene sceneID="Q9d-rh-dJJ">
             <objects>
                 <tableViewController id="tAG-NB-qa2" customClass="MyEventsTableViewController" customModule="SlugLife" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ve4-s3-Z5G">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="ve4-s3-Z5G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventPostCell" rowHeight="110" id="o8W-OE-7tF" customClass="EventPostTableViewCell" customModule="SlugLife" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="110"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="EventPostTableViewCell" id="o8W-OE-7tF" customClass="EventPostTableViewCell" customModule="SlugLife" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8W-OE-7tF" id="Q8a-3E-cTV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA6-5n-C2b">
-                                            <rect key="frame" x="51" y="0.0" width="278" height="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA6-5n-C2b">
+                                            <rect key="frame" x="20" y="8" width="249" height="26"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zg-jG-fb2">
+                                            <rect key="frame" x="20" y="67" width="249" height="32.5"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-Nj-E8F">
-                                            <rect key="frame" x="51" y="39" width="302" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zg-jG-fb2">
-                                            <rect key="frame" x="51" y="78" width="316" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-Nj-E8F">
+                                            <rect key="frame" x="20" y="42" width="186" height="23"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -515,6 +515,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="tAG-NB-qa2" id="ARC-jQ-A3z"/>
                             <outlet property="delegate" destination="tAG-NB-qa2" id="xbl-Pe-3ML"/>
@@ -530,7 +531,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add" id="u3R-cZ-R9B">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="zRU-eH-Eih" kind="showDetail" id="5Nn-Wb-p4L"/>
+                                <segue destination="zRU-eH-Eih" kind="show" id="S8S-TP-Vjm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -573,6 +574,7 @@
         <!--ChooseCollegeController-->
         <scene sceneID="iIo-be-iLg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MPG-U8-LFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="ChooseCollegeController" automaticallyAdjustsScrollViewInsets="NO" id="8I9-dQ-hrH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -587,7 +589,6 @@
                         <segue destination="ocj-tV-g07" kind="relationship" relationship="rootViewController" id="JdZ-y9-w5Z"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MPG-U8-LFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1246.5" y="643.5"/>
         </scene>
