@@ -28,6 +28,7 @@ class MainRegisterViewController: UIViewController {
         let user = PFUser()
         user.username = userTextField.text
         user.password = passwordTextField.text
+        user.email = userTextField.text
         
         print("here")
         
@@ -37,6 +38,8 @@ class MainRegisterViewController: UIViewController {
         user.signUpInBackgroundWithBlock { succeeded, error in
             if (succeeded) {
                 //The registration was successful, go to the wall
+                //
+
                 self.performSegueWithIdentifier(self.scrollViewWallSegue, sender: nil)
             } else if let error = error {
                 //Something bad has occurred

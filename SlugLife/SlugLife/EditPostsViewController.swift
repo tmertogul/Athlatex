@@ -59,10 +59,29 @@ class EditPostsViewController: UIViewController , UITextFieldDelegate{
     }
     
     @IBAction func putEventFields(sender: AnyObject) {
-         print("press done")
+        print("press done")
         //navigationItem.rightBarButtonItem?.enabled = false
+        let query = PFQuery(className: "EventPost")
+        query.getObjectInBackgroundWithId(objectIdPassed) {
+            (eventPost: PFObject?, error: NSError?) -> Void in
+            if error == nil && eventPost != nil {
+                print(eventPost?.objectForKey("nameStr"))
+                eventPost!["nameStr"] = self.editName.text
+                eventPost!["collegeStr"] = self.editCollege.text
+                eventPost!["dateStr"] = self.editDate.text
+                eventPost!["descrip"] = self.editDesc.text
+                eventPost?.saveInBackground()
+                
+                print (self.editName.text )
+            } else {
+                print(error)
+            }
+        }
+        
+        
         self.navigationController?.popViewControllerAnimated(true)
     }
+
 
     /*
     // MARK: - Navigation

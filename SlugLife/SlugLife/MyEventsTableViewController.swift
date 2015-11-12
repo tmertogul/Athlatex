@@ -105,7 +105,7 @@ class MyEventsTableViewController: PFQueryTableViewController {
         let creationDate = wallPost.createdAt
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm dd/MM yyyy"
-        let dateString = dateFormatter.stringFromDate(creationDate!)
+        _ = dateFormatter.stringFromDate(creationDate!)
             
         
         //let username = wallPost.user.username

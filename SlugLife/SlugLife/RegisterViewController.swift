@@ -28,8 +28,10 @@ class RegisterViewController: UIViewController {
         let user = PFUser()
         user.username = userTextField.text
         user.password = passwordTextField.text
+        user.email = userTextField.text
         
         print("here")
+    
         
         
         //TODO

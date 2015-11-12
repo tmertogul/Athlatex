@@ -29,32 +29,46 @@ import UIKit
         
         override func viewWillAppear(animated: Bool) {
             loadObjects()
+            
         }
         
         //automatically login as a guest so that we can query database
         
-        override func queryForTable() -> PFQuery {
-            
-           // let curr_user = PFUser.currentUser()
-            let query = PFQuery(className: "EventPost")
+        var queryString = "updatedAt"
+        
+        
+        @IBAction func segmentedControlChanged(sender: AnyObject) {
             
             if(segmentedControl.selectedSegmentIndex == 0){
-                return query.addAscendingOrder("updatedAt")
+                print ("her4")
+               queryString = "updatedAt"
+                self.loadObjects()
+                self.tableView.reloadData()
             }
             else  if (segmentedControl.selectedSegmentIndex == 1) {
-                return query.addAscendingOrder("dateStr")
+                queryString = "dateStr"
+                self.loadObjects()
+                self.tableView.reloadData()
             }
             else  if (segmentedControl.selectedSegmentIndex == 2) {
-                return query.addAscendingOrder("collegeStr")
-            } else {
-                print("outofbounds")
-                return query
+                queryString = "collegeStr"
+                self.loadObjects()
+                self.tableView.reloadData()
             }
             
-            // code to sort by updated at
-            //return query.addAscendingOrder("updatedAt")
-            //return query
         }
+        
+        override func queryForTable() -> PFQuery {
+            
+    
+            let query = PFQuery(className: "EventPost")
+
+            query.addAscendingOrder(queryString)
+             return query
+            }
+            
+
+        
         
         
         override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
@@ -79,7 +93,7 @@ import UIKit
             let creationDate = wallPost.createdAt
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "HH:mm dd/MM yyyy"
-            let dateString = dateFormatter.stringFromDate(creationDate!)
+            _ = dateFormatter.stringFromDate(creationDate!)
             
             
             //let username = wallPost.user.username
