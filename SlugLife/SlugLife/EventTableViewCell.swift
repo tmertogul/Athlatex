@@ -16,4 +16,5 @@ class EventTableViewCell: PFTableViewCell {
     @IBOutlet  var datetime: UILabel!
     @IBOutlet  var descrip: UILabel!
     
+    @IBOutlet weak var addbutton: UIButton!
 }

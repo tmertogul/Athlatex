@@ -352,7 +352,7 @@
 				TargetAttributes = {
 					221CC94A1BC3103100EC8A51 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 7T7E59WKSX;
+						DevelopmentTeam = 7X7L83AZZS;
 					};
 					221CC9601BC3103100EC8A51 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -566,12 +566,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SlugLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Athlatex-cs115.SlugLife";
+				PRODUCT_BUNDLE_IDENTIFIER = cs115.SlugLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SlugLife-Bridging-Header.h";
@@ -591,12 +592,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SlugLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Athlatex-cs115.SlugLife";
+				PRODUCT_BUNDLE_IDENTIFIER = cs115.SlugLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SlugLife-Bridging-Header.h";

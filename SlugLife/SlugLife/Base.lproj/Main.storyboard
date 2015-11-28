@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
@@ -89,6 +90,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="Event" destination="1KH-1B-iDE" id="y46-J0-OlM"/>
+                                    <outlet property="addbutton" destination="dCS-h1-djb" id="rsS-wf-sCJ"/>
                                     <outlet property="college" destination="Kbx-v1-pPF" id="CeW-l3-55b"/>
                                     <outlet property="datetime" destination="pkc-yk-us5" id="Bp3-wX-3Se"/>
                                     <outlet property="descrip" destination="DTF-v6-4Io" id="0S1-QA-trn"/>
@@ -110,6 +112,9 @@
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToSettingsButtonTapped:" destination="ckt-NM-1hA" eventType="touchUpInside" id="Fgo-za-0Vg"/>
+                                </connections>
                             </button>
                             <color key="tintColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -121,7 +126,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38G-PY-yH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240.5" y="1036.5"/>
+            <point key="canvasLocation" x="1158.5" y="1176.5"/>
         </scene>
         <!--Map-->
         <scene sceneID="M40-HL-afz">
@@ -368,7 +373,6 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="add_button" destination="u3R-cZ-R9B" id="2i4-Vi-Ycb"/>
                         <segue destination="Jqx-R5-Lsi" kind="show" identifier="segueToEdit" id="w7k-OP-vdt"/>
                     </connections>
                 </tableViewController>
@@ -427,6 +431,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIe-sQ-A2V">
+                                <rect key="frame" x="39" y="150" width="296" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD4-Vq-mAC">
                                 <rect key="frame" x="206" y="218" width="129" height="50"/>
                                 <animations/>
@@ -445,12 +455,6 @@
                                     <segue destination="4qQ-vK-YFU" kind="show" id="e9s-Ks-A3e"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIe-sQ-A2V">
-                                <rect key="frame" x="39" y="150" width="296" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
