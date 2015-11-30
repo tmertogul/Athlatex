@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
@@ -78,12 +79,18 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCS-h1-djb">
+                                            <rect key="frame" x="57" y="175" width="149" height="30"/>
+                                            <animations/>
+                                            <state key="normal" title="Add to Calendar"/>
+                                        </button>
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
                                     <outlet property="Event" destination="1KH-1B-iDE" id="y46-J0-OlM"/>
+                                    <outlet property="addbutton" destination="dCS-h1-djb" id="rsS-wf-sCJ"/>
                                     <outlet property="college" destination="Kbx-v1-pPF" id="CeW-l3-55b"/>
                                     <outlet property="datetime" destination="pkc-yk-us5" id="Bp3-wX-3Se"/>
                                     <outlet property="descrip" destination="DTF-v6-4Io" id="0S1-QA-trn"/>
@@ -102,11 +109,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Colleges">
+                                <state key="normal" title="Settings">
                                     <color key="titleColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8I9-dQ-hrH" kind="presentation" id="mQ8-yA-2lu"/>
+                                    <action selector="goToSettingsButtonTapped:" destination="ckt-NM-1hA" eventType="touchUpInside" id="Fgo-za-0Vg"/>
                                 </connections>
                             </button>
                             <color key="tintColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,42 +126,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38G-PY-yH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240.5" y="1036.5"/>
-        </scene>
-        <!--Choose College-->
-        <scene sceneID="uIu-s9-hkR">
-            <objects>
-                <tableViewController id="ocj-tV-g07" customClass="CollegePickerViewController" customModule="SlugLife" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qQJ-a3-UIN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ocj-tV-g07" id="rnv-MF-x9K"/>
-                            <outlet property="delegate" destination="ocj-tV-g07" id="ho7-2d-TAi"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Choose College" id="uKY-up-e3r">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TzR-6L-fbP">
-                            <color key="tintColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="itU-Q1-fKp" kind="unwind" unwindAction="cancelToCollegePickerViewController:" id="iPL-uS-q6O"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="jAP-92-cpY">
-                            <color key="tintColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="itU-Q1-fKp" kind="unwind" unwindAction="saveCollegePicker:" id="adX-aE-Olz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qGQ-rW-ZZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="itU-Q1-fKp" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="2395.5" y="1036.5"/>
+            <point key="canvasLocation" x="1158.5" y="1176.5"/>
         </scene>
         <!--Map-->
         <scene sceneID="M40-HL-afz">
@@ -218,7 +190,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5.5" y="239.5"/>
+            <point key="canvasLocation" x="5.5" y="151.5"/>
         </scene>
         <!--Add-->
         <scene sceneID="MKx-W0-Ybq">
@@ -310,7 +282,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGL-Az-3zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jPI-ag-y4r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1818.5" y="151.5"/>
+            <point key="canvasLocation" x="1930.5" y="369.5"/>
         </scene>
         <!--My Events-->
         <scene sceneID="Q9d-rh-dJJ">
@@ -394,6 +366,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add" id="u3R-cZ-R9B">
                             <color key="tintColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
+                                <action selector="disable_button:" destination="tAG-NB-qa2" id="ZLL-Tz-aMY"/>
                                 <segue destination="zRU-eH-Eih" kind="show" id="S8S-TP-Vjm"/>
                             </connections>
                         </barButtonItem>
@@ -436,123 +409,6 @@
             </objects>
             <point key="canvasLocation" x="653.5" y="1036.5"/>
         </scene>
-        <!--ChooseCollegeController-->
-        <scene sceneID="iIo-be-iLg">
-            <objects>
-                <navigationController title="ChooseCollegeController" automaticallyAdjustsScrollViewInsets="NO" id="8I9-dQ-hrH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3gR-zY-XlF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ocj-tV-g07" kind="relationship" relationship="rootViewController" id="JdZ-y9-w5Z"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MPG-U8-LFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1818.5" y="1036.5"/>
-        </scene>
-        <!--Events-->
-        <scene sceneID="8Ok-Lc-Tpn">
-            <objects>
-                <tableViewController storyboardIdentifier="StudentTableView" id="6dQ-cd-kXS" userLabel="Events" customClass="StudentViewTableViewController" customModule="SlugLife" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" sectionHeaderHeight="28" sectionFooterHeight="28" id="aTh-zq-DgB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentEventsCell" rowHeight="210" id="yIv-Ko-3RG" customClass="StudentEventsCell" customModule="SlugLife" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="210"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yIv-Ko-3RG" id="1x3-7h-dQj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kG-dE-yrk">
-                                            <rect key="frame" x="54" y="37" width="291" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoA-lT-34N">
-                                            <rect key="frame" x="54" y="85" width="300" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umk-fM-n7d">
-                                            <rect key="frame" x="54" y="131" width="300" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9k-GJ-gsL">
-                                            <rect key="frame" x="17" y="8" width="337" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fci-ej-n7m">
-                                            <rect key="frame" x="314" y="176" width="40" height="25"/>
-                                            <animations/>
-                                            <state key="normal" title="RSVP"/>
-                                        </button>
-                                    </subviews>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <outlet property="Title" destination="Y9k-GJ-gsL" id="97v-x1-5TL"/>
-                                    <outlet property="college" destination="9kG-dE-yrk" id="2q7-Wy-f1e"/>
-                                    <outlet property="datetime" destination="uoA-lT-34N" id="5b9-Ub-uGL"/>
-                                    <outlet property="descrip" destination="Umk-fM-n7d" id="sIn-Lv-cck"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="6dQ-cd-kXS" id="95t-6U-vZ8"/>
-                            <outlet property="delegate" destination="6dQ-cd-kXS" id="Hgy-gV-WcJ"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="o68-wg-aYn"/>
-                    <navigationItem key="navigationItem" title="Events" id="t8K-Tb-ida"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xz7-fO-BpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBar contentMode="scaleToFill" id="oLI-AW-2rW">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <items>
-                        <tabBarItem systemItem="favorites" id="bpE-VL-J4x"/>
-                        <tabBarItem systemItem="more" id="f8M-PD-Shk"/>
-                    </items>
-                </tabBar>
-                <navigationBar contentMode="scaleToFill" id="btK-Oy-A5V">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                    <items>
-                        <navigationItem title="Title" id="1y1-dP-ReI"/>
-                    </items>
-                </navigationBar>
-            </objects>
-            <point key="canvasLocation" x="1233.5" y="-1373.5"/>
-        </scene>
         <!--Main Register View Controller-->
         <scene sceneID="FLb-iN-qhk">
             <objects>
@@ -576,27 +432,33 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIe-sQ-A2V">
-                                <rect key="frame" x="39" y="150" width="296" height="30"/>
+                                <rect key="frame" x="39" y="144" width="296" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD4-Vq-mAC">
-                                <rect key="frame" x="206" y="218" width="129" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bt5-wd-1Nl" userLabel="Password Text Field Confirm">
+                                <rect key="frame" x="39" y="185" width="296" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Signup"/>
-                                <connections>
-                                    <action selector="signUpPressed:" destination="5XW-oF-zX5" eventType="touchUpInside" id="VI3-kM-3HA"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdq-X4-EnM">
-                                <rect key="frame" x="39" y="223" width="95" height="40"/>
+                                <rect key="frame" x="39" y="236" width="95" height="40"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <segue destination="4qQ-vK-YFU" kind="show" id="e9s-Ks-A3e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD4-Vq-mAC">
+                                <rect key="frame" x="206" y="231" width="129" height="50"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Signup"/>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="5XW-oF-zX5" eventType="touchUpInside" id="VI3-kM-3HA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -606,13 +468,14 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="passwordTextField" destination="uIe-sQ-A2V" id="bP0-Nk-det"/>
+                        <outlet property="passwordTextFieldConfirm" destination="Bt5-wd-1Nl" id="71l-uR-Veb"/>
                         <outlet property="userTextField" destination="T8N-Dc-4NI" id="jze-Nu-gC2"/>
                         <segue destination="4qQ-vK-YFU" kind="show" identifier="SignupSuccessful" id="pDz-6T-2Hb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nam-hz-U8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653.5" y="-589.5"/>
+            <point key="canvasLocation" x="653.5" y="-711.5"/>
         </scene>
         <!--Login-->
         <scene sceneID="z3l-ig-63V">
@@ -653,14 +516,14 @@
                                     <color key="titleColor" red="1" green="0.83657381509999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5XW-oF-zX5" kind="show" id="ebb-Xx-vEd"/>
+                                    <segue destination="5XW-oF-zX5" kind="show" id="Vy6-dD-eik"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-I7-0hL">
                                 <rect key="frame" x="42" y="162" width="290" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Registered?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtM-Re-QWa">
                                 <rect key="frame" x="42" y="269" width="137" height="33"/>
@@ -679,12 +542,11 @@
                         <outlet property="passwordTextField" destination="dGR-I7-0hL" id="t7a-nd-8px"/>
                         <outlet property="userTextField" destination="M7i-Il-Yc3" id="8qE-eq-Kvq"/>
                         <segue destination="49e-Tb-3d3" kind="presentation" identifier="LoginSuccessful" id="Y8d-Lt-OaO"/>
-                        <segue destination="GHv-Pw-KWn" kind="presentation" identifier="LoginDefaultUserSuccessful" id="9ON-nT-WVL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qji-3I-L2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5.5" y="-589.5"/>
+            <point key="canvasLocation" x="5.5" y="-711.5"/>
         </scene>
         <!--NavigationController-->
         <scene sceneID="Gaq-jd-585">
@@ -708,7 +570,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xt2-no-RDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240.5" y="-589.5"/>
+            <point key="canvasLocation" x="1240.5" y="-711.5"/>
         </scene>
         <!--Edit Your Post -->
         <scene sceneID="Hb3-Rh-Amg">
@@ -813,7 +675,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SpJ-sR-dMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jPT-6B-OfK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1818.5" y="-589.5"/>
+            <point key="canvasLocation" x="1943.5" y="-369.5"/>
         </scene>
         <!--My Events-->
         <scene sceneID="LOY-ry-B7W">
@@ -839,25 +701,6 @@
             </objects>
             <point key="canvasLocation" x="653.5" y="151.5"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="mJO-Aw-COX">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GHv-Pw-KWn" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="DXH-Nk-qBV">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="6dQ-cd-kXS" kind="relationship" relationship="viewControllers" id="KCC-4Y-hSM"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rms-se-ltR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="653.5" y="-1373.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Plus-25.png" width="25" height="25"/>
@@ -869,5 +712,4 @@
     <inferredMetricsTieBreakers>
         <segue reference="pDz-6T-2Hb"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

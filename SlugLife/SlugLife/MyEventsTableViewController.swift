@@ -13,6 +13,16 @@ class MyEventsTableViewController: PFQueryTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = PFUser.currentUser()
+        let verified = user!["verifiedPoster"] as! Bool;
+        if(verified == false){
+        add_button.enabled = false;
+            let alertController = UIAlertController(title: "Not Verified Poster", message:
+                "You do not have permission to publish events. To get verified to publish events and view your posts, email the SlugLife team at foobarbaz@ucsc.edu.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
 
@@ -24,6 +34,8 @@ class MyEventsTableViewController: PFQueryTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var add_button: UIBarButtonItem!
+
     @IBAction func cancelAddEvents(segue:UIStoryboardSegue) {
         print("cancelAddEvents func in MyEventsTabController")
     }

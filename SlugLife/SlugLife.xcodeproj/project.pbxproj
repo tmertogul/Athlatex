@@ -49,8 +49,6 @@
 		33EEF3B81BCC6793002B1926 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3B71BCC6793002B1926 /* AudioToolbox.framework */; };
 		33EEF3C11BCC6EC5002B1926 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3C01BCC6EC5002B1926 /* libsqlite3.dylib */; };
 		33EEF3C31BCC6EDF002B1926 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EEF3C21BCC6EDF002B1926 /* libz.1.dylib */; };
-		6D5639471BFE6AF1002802BA /* StudentEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5639461BFE6AF1002802BA /* StudentEventsCell.swift */; };
-		6D5639491BFE6BB7002802BA /* StudentViewTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5639481BFE6BB7002802BA /* StudentViewTableController.swift */; };
 		6D63BAAD1BD97F6800358608 /* EventPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D63BAAC1BD97F6800358608 /* EventPostTableViewCell.swift */; };
 		6D63BAAF1BD9855A00358608 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D63BAAE1BD9855A00358608 /* MyEventsTableViewController.swift */; };
 		6DAE28FD1BE2B473004C0CA5 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE28FC1BE2B473004C0CA5 /* EventTableViewCell.swift */; };
@@ -114,8 +112,6 @@
 		33EEF3B71BCC6793002B1926 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		33EEF3C01BCC6EC5002B1926 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		33EEF3C21BCC6EDF002B1926 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
-		6D5639461BFE6AF1002802BA /* StudentEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentEventsCell.swift; sourceTree = "<group>"; };
-		6D5639481BFE6BB7002802BA /* StudentViewTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewTableController.swift; sourceTree = "<group>"; };
 		6D63BAAC1BD97F6800358608 /* EventPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPostTableViewCell.swift; sourceTree = "<group>"; };
 		6D63BAAE1BD9855A00358608 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
 		6DAE28FC1BE2B473004C0CA5 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -233,7 +229,6 @@
 				332822321BC788B000A51850 /* EventCell.swift */,
 				6D63BAAC1BD97F6800358608 /* EventPostTableViewCell.swift */,
 				6DAE28FC1BE2B473004C0CA5 /* EventTableViewCell.swift */,
-				6D5639461BFE6AF1002802BA /* StudentEventsCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -281,7 +276,6 @@
 			children = (
 				3328222A1BC7703800A51850 /* CollegePickerViewController.swift */,
 				3328222E1BC7733100A51850 /* CollegeViewTableViewController.swift */,
-				6D5639481BFE6BB7002802BA /* StudentViewTableController.swift */,
 			);
 			name = "College view/picker";
 			sourceTree = "<group>";
@@ -358,7 +352,7 @@
 				TargetAttributes = {
 					221CC94A1BC3103100EC8A51 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 7T7E59WKSX;
+						DevelopmentTeam = 7X7L83AZZS;
 					};
 					221CC9601BC3103100EC8A51 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -432,9 +426,7 @@
 				33A99AAF1BCDE2F50007CF82 /* AddEventsViewController.swift in Sources */,
 				6D63BAAF1BD9855A00358608 /* MyEventsTableViewController.swift in Sources */,
 				221CC94F1BC3103100EC8A51 /* AppDelegate.swift in Sources */,
-				6D5639491BFE6BB7002802BA /* StudentViewTableController.swift in Sources */,
 				332822331BC788B000A51850 /* EventCell.swift in Sources */,
-				6D5639471BFE6AF1002802BA /* StudentEventsCell.swift in Sources */,
 				221CC9511BC3103100EC8A51 /* FirstViewController.swift in Sources */,
 				33EEF39D1BCC623D002B1926 /* UIViewControllerExtension.swift in Sources */,
 				3328222F1BC7733100A51850 /* CollegeViewTableViewController.swift in Sources */,
@@ -574,12 +566,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SlugLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Athlatex-cs115.SlugLife";
+				PRODUCT_BUNDLE_IDENTIFIER = cs115.SlugLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SlugLife-Bridging-Header.h";
@@ -599,12 +592,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SlugLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Athlatex-cs115.SlugLife";
+				PRODUCT_BUNDLE_IDENTIFIER = cs115.SlugLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SlugLife-Bridging-Header.h";
