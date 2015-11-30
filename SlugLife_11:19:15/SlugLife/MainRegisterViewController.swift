@@ -23,7 +23,7 @@ class MainRegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func showAltert(){
+    @IBAction func showAlert(){
         let alertController = UIAlertController(title: "Invalid User Name", message: "Please enter an @ucsc.edu account name", preferredStyle: .Alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
@@ -57,7 +57,7 @@ class MainRegisterViewController: UIViewController {
                 }
             }
         }else{
-            self.showAltert()
+            self.showAlert()
         }
     }
     
